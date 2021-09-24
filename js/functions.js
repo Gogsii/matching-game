@@ -18,8 +18,8 @@ function generateFaces() {
     for (let i=0; i < numberOfFaces; i++) { //for # of smileys - 1, do this once, starts count at 0
         let face = document.createElement('img'); //creates new img element in DOM
         face.src = 'images/smile.png'; //assigns smile.png to the img element in DOM
-        let randomTop = Math.floor(Math.random() * 400) +1; //generates a number between 1 and 400, adds +1 to tell it to start counting from 1
-        let randomLeft = Math.floor(Math.random() * 400) +1; //generates a number between 1 and 400, adds +1 to tell it to start counting from 1
+        let randomTop = Math.floor(Math.random() * 400) + 1; //generates a number between 1 and 400, adds +1 to tell it to start counting from 1
+        let randomLeft = Math.floor(Math.random() * 400) + 1; //generates a number between 1 and 400, adds +1 to tell it to start counting from 1
         face.style.top = randomTop + 'px'; //assigns a random top position for face img in pixels
         face.style.left = randomLeft + 'px'; //assigns a random left positionfor face img in pixels
         theLeftSide.appendChild(face); //appends face to the left side for this iteration
@@ -32,7 +32,7 @@ function generateFaces() {
     attempt += 1;
 }
 function nextLevel() {
-    Event.stopPropagation(); //ensures the event is only applied to one face at a time
+    event.stopPropagation(); //ensures the event is only applied to one face at a time
 
     numberOfFaces += 1; //adds 5 new faces to the screen per side each time
     while (theLeftSide.firstChild) {
